@@ -48,7 +48,7 @@ sequenceDiagram
   F->>GS: append row (status=confirmed)
   F-->>R: {success, booking_ref, confirm_speakable}
   R-->>U: Confirmation (weekday + date + time)
-
+```
 ---
 
 ## 3. Conversation Flow
@@ -67,7 +67,7 @@ flowchart TD
   H --> J{Reschedule or Cancel?}
   J -->|Reschedule| K[Verify + new time] --> L{reschedule-booking}
   J -->|Cancel| M[Verify identity] --> N{cancel-booking}
-
+```
 ---
 
 ## 4. Tools & Libraries (Why)
