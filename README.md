@@ -93,22 +93,3 @@ flowchart TD
 
 ---
 
-## 6. Extras / Delighters
-
-- Idempotent bookings via **bookingRef** stored on the Calendar event.  
-- Clear **Sheet audit trail** with timestamps and statuses (`confirmed`, `rescheduled`, `cancelled`).  
-- Robust **reschedule** via reference normalization and patient fallback.
-
----
-
-## 7. If I Had More Time…
-
-1. Clinic rules & closures (holiday calendar; age/consent; vaccine inventory). Give dropdown options for patients to select.
-2. SMS/email confirmations and reminders.  
-3. Staff dashboard (review queue, overrides).  
-4. Duplicate booking detection and simple patient profiles.  
-5. PHIPA/HIPAA hardening and data-retention policies.
-6. Durable orchestration (Temporal / Cloud Tasks / Durable Functions):
-  - Run booking/reschedule/cancel as **workflows with retries and compensation**.
-  - If Google APIs are down, the agent still chats, **queues the job**, gives the user a ticket/ETA, and **auto-retries** until success. On success/failure, notify via SMS/email.
-
